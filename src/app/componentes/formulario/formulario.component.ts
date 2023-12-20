@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Aluno } from '../../modelo/Aluno';
 
 @Component({
   selector: 'app-formulario',
@@ -10,6 +11,12 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './formulario.component.css',
 })
 export class FormularioComponent {
+  @Output() cadastrarAluno = new EventEmitter<Aluno>();
+
+  cadastrar(): void {
+    this.cadastrarAluno.emit(this.formulario.value as Aluno);
+  }
+
   formulario = new FormGroup({
     nome: new FormControl(''),
     nota1: new FormControl(''),

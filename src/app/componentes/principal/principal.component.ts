@@ -28,4 +28,8 @@ export class PrincipalComponent {
       nota2: 4,
     },
   ];
+
+  cadastrarAluno(obj: Aluno): void {
+    this.alunos.push(obj);
+  }
 }

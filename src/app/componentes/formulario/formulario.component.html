@@ -1,5 +1,5 @@
 <p>{{ formulario.value | json }}</p>
-<form [formGroup]="formulario">
+<form [formGroup]="formulario" (submit)="cadastrar()">
   <input
     type="text"
     placeholder="Nome"
