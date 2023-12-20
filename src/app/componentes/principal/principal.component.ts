@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Aluno } from '../../modelo/Aluno';
+import { TabelaComponent } from '../tabela/tabela.component';
+import { FormularioComponent } from '../formulario/formulario.component';
 
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [],
+  imports: [TabelaComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css',
 })
