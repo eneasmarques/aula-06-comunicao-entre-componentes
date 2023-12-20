@@ -6,7 +6,7 @@ import { FormularioComponent } from '../formulario/formulario.component';
 @Component({
   selector: 'app-principal',
   standalone: true,
-  imports: [TabelaComponent],
+  imports: [TabelaComponent, FormularioComponent],
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css',
 })
